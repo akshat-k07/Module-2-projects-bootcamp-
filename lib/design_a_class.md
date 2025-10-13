@@ -198,13 +198,10 @@ todo.mark_complete("Task 1")  # => raises ValueError("Task not found: Task 1")
 import pytest
 from your_module_name import TodoList  # Replace with the actual module name
 
-# ---------- Initial State ----------
 
 def test_list_returns_empty_when_no_tasks_added():
     todo = TodoList()
     assert todo.list() == []
-
-# ---------- Adding Tasks ----------
 
 def test_list_returns_single_task_after_adding_one():
     todo = TodoList()
@@ -217,8 +214,6 @@ def test_list_returns_tasks_in_order_added():
     todo.add("Walk the dog")
     todo.add("Do homework")
     assert todo.list() == ["Buy milk", "Walk the dog", "Do homework"]
-
-# ---------- Marking Tasks Complete ----------
 
 def test_mark_complete_removes_task_from_list():
     todo = TodoList()
